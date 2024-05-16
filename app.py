@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import logging
+
 
 def main() -> None:
     """Solve the problem."""
@@ -23,9 +25,10 @@ def main() -> None:
     )
 
     # print the result
-    print("".join(sorted_data))
+    logging.info("".join(sorted_data))
 
 
 # call the main function
 if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO)
     main()  # main function
