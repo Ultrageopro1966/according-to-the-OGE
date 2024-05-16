@@ -2,7 +2,7 @@
 
 The repository provides a solution to the problem listed below.
 
-![image]("https://i.ibb.co/XDHT0c7/photo-2024-05-16-13-46-44.jpg" )
+![photo_2024-05-16_13-46-44](https://github.com/Ultrageopro1966/according-to-the-OGE/assets/120571667/efefb9e3-70ce-4595-8c38-d765ab20783b)
 > task
 
 ## Run the code
