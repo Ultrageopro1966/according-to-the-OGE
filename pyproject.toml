@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "yandex task"
+version = "0.1.0"
+description = "ммм... информатика..."
+authors = ["Ultrageopro1966 <ultrageopro@proton.me>"]
+license = "MIT License"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
