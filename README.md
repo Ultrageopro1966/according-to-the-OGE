@@ -1,9 +1,24 @@
-# Computer Science Task Grade 10
+# Computer Science Task 2 Grade 10
+DATE: `2024-05-16`
 
 The repository provides a solution to the problem listed below.
 
-![photo_2024-05-16_13-46-44](https://github.com/Ultrageopro1966/according-to-the-OGE/assets/120571667/efefb9e3-70ce-4595-8c38-d765ab20783b)
-> task
+```
+Задача 2
+Есть три строки из букв английского алфавита. Требуется составить из этих строк наименьшую в смысле лексикографического порядка строку.
+Пример
+YEAR
+MY
+MADE
+даст MADEMYYEAR
+ВАЖНЫЙ ПРИМЕР
+IVANOV
+POBEDIL
+IVANOVA
+
+ДОЛЖНО ДАТЬ
+IVANOVAIVANOVPOBEDIL
+```
 
 ## Run the code
 ```bash

@@ -1,29 +1,26 @@
 """Мммм... информатика..."""
 
+from __future__ import annotations
+
 
 def main() -> None:
     """Solve the problem."""
-    counter1 = 0  # number of 3-digit numbers
-    counter2 = 0  # number of multiples of 4
-    counter3 = 0  # number ofnumbers ending in 3
+    # read the strings
+    string1: str = input()
+    string2: str = input()
+    string3: str = input()
 
-    while True:  # endless loop
-        n = int(input())  # read a number
+    # get max length
+    max_length: int = max(len(string1), len(string2), len(string3))
 
-        if not n:  # break if n == 0
-            break
+    # sort the strings
+    sorted_data: list[str] = sorted(
+        [string1, string2, string3],
+        key=lambda x: x.ljust(max_length, "Z"),
+    )
 
-        if len(str(abs(n))) == 3:  # 3-digit numbers  # noqa: PLR2004
-            counter1 += 1
-
-        if n % 4 == 0:  # multiples of 4
-            counter2 += 1
-
-        if abs(n) % 10 == 3:  # numbers ending in 3  # noqa: PLR2004
-            counter3 += 1
-
-    # print results
-    print(counter1, counter2, counter3, sep="\n")  # noqa: T201
+    # print the result
+    print("".join(sorted_data))
 
 
 # call the main function
