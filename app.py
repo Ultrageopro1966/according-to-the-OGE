@@ -3,30 +3,26 @@
 from __future__ import annotations
 
 import logging
+from itertools import permutations
+from typing import Iterator
 
 
-def main() -> None:
+def main() -> str:
     """Solve the problem."""
-    # read the strings
-    string1: str = input()
-    string2: str = input()
-    string3: str = input()
+    x1, y1, z1 = int(input()), int(input()), int(input())  # sides of the first box
+    x2, y2, z2 = int(input()), int(input()), int(input())  # sides of the second box
 
-    # get max length
-    max_length: int = max(len(string1), len(string2), len(string3))
+    first_box_combinations: Iterator = permutations([x1, y1, z1])
 
-    # get next char after "z" letter
-    next_char: str = chr(ord("z") + 1)
+    if sorted([x1, y1, z1]) == sorted([x2, y2, z2]):
+        return "Equal"
 
-    # sort the strings
-    sorted_data: list[str] = sorted(
-        [string1, string2, string3],
-        key=lambda x: x.ljust(max_length, next_char),
-    )
-
-    # log the result
-    ans: str = "".join(sorted_data)
-    logging.info(ans)
+    for x, y, z in first_box_combinations:
+        if (x <= x2) and (y <= y2) and (z <= z2):
+            return "First"
+        if (x >= x2) and (y >= y2) and (z >= z2):
+            return "Second"
+    return "None"
 
 
 # call the main function
@@ -34,5 +30,6 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)  # set logging config
 
     logging.info("App started.")
-    main()  # main function
+    result = main()  # main function
+    logging.info("Result: %s", result)
     logging.info("App finished.")
