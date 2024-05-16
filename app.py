@@ -24,11 +24,15 @@ def main() -> None:
         key=lambda x: x.ljust(max_length, next_char),
     )
 
-    # print the result
-    logging.info("".join(sorted_data))
+    # log the result
+    ans: str = "".join(sorted_data)
+    logging.info(ans)
 
 
 # call the main function
 if __name__ == "__main__":
-    logging.basicConfig(level=logging.INFO)
+    logging.basicConfig(level=logging.INFO)  # set logging config
+
+    logging.info("App started.")
     main()  # main function
+    logging.info("App finished.")
